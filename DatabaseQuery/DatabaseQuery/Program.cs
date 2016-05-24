@@ -18,7 +18,13 @@ namespace DatabaseQuery
     {
         static void Main()
         {
-            var db = new DataContext(@"d:\SQL_DataBaseFiles\myDbase.mdf");
+            #region SurfaceBook Version
+            //var db = new DataContext(@"f:\SQL_DataBaseFiles\myDbase.mdf");
+            #endregion
+
+            #region SurfacePro3 Version
+            var db = new DataContext(@"d:\SQL_DataBaseFiles\myDbase.mdf"); 
+            #endregion
 
             var query = from c in db.GetTable<Tbl>()
                 where c.Name == "Mike"
