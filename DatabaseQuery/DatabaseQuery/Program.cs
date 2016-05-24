@@ -23,7 +23,7 @@ namespace DatabaseQuery
             #endregion
 
             #region SurfacePro3 Version
-            var db = new DataContext(@"d:\SQL_DataBaseFiles\myDbase.mdf"); 
+            var db = new DataContext(@"d:\SQL_DataBaseFiles\myDbase.mdf");
             #endregion
 
             var query = from c in db.GetTable<Tbl>()
