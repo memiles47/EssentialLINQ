@@ -20,11 +20,11 @@ namespace DatabaseQuery
             var db = new DataContext(ConnectString());
 
             var query = from c in db.GetTable<EmployeesTable>()
-                where c.Name == "Mike"
+                //where c.Name == "Mike"
                 select c;
 
             foreach(var item in query)
-                Console.WriteLine($"{item.Name}");
+                Console.WriteLine($"Name: {item.Name}, Title: {item.Title}");
         }
 
         private static string ConnectString()
