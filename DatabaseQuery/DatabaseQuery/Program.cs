@@ -29,10 +29,9 @@ namespace DatabaseQuery
 
         private static string ConnectString()
         {
-            var connectString = Environment.MachineName == "MEM_SURFACE"
+            return Environment.MachineName == "MEM_SURFACE"
                 ? @"server = MEM_SURFACE\SQLEXPRESS; integrated security = true; database = myDbase;"
                 : @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDbase;";
-            return connectString;
         }
     }
 }
