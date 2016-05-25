@@ -17,11 +17,7 @@ namespace DatabaseQuery
     {
         static void Main()
         {
-            var connectionString = Environment.MachineName == "MEM-SURFACEBOOK"
-                ? @"F:\SQL_DataBaseFiles\myDbase.mdf"
-                : @"D:\SQL_DataBaseFiles\myDbase.mdf";
-
-            var db = new DataContext(connectionString);
+            var db = new DataContext(ConnectString());
 
             var query = from c in db.GetTable<EmployeesTable>()
                 where c.Name == "Mike"
@@ -29,6 +25,14 @@ namespace DatabaseQuery
 
             foreach(var item in query)
                 Console.WriteLine($"ID: {item.Id}\nName: {item.Name}\nTitle: {item.Title}");
+        }
+
+        private static string ConnectString()
+        {
+            var connectString = Environment.MachineName == "MEM_SURFACE"
+                ? @"server = MEM_SURFACE\SQLEXPRESS; integrated security = true; database = myDbase;"
+                : @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDbase;";
+            return connectString;
         }
     }
 }
