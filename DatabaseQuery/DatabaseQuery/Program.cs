@@ -17,7 +17,6 @@ namespace DatabaseQuery
     {
         static void Main()
         {
-            //Additions making this code machine agnostic
             var connectionString = Environment.MachineName == "MEM-SURFACEBOOK"
                 ? @"F:\SQL_DataBaseFiles\myDbase.mdf"
                 : @"D:\SQL_DataBaseFiles\myDbase.mdf";
