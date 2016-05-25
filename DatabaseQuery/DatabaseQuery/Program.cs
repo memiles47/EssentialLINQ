@@ -3,7 +3,6 @@ using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Linq;
 
-
 namespace DatabaseQuery
 {
     [Table(Name = "Employees")]
@@ -18,14 +17,11 @@ namespace DatabaseQuery
     {
         static void Main()
         {
-            #region SurfaceBook Version
-            //var db = new DataContext(@"f:\SQL_DataBaseFiles\myDbase.mdf");
-            #endregion
+            var connectionString = Environment.MachineName == "MEM-SURFACEBOOK"
+                ? @"F:\SQL_DataBaseFiles\myDbase.mdf"
+                : @"D:\SQL_DataBaseFiles\myDbase.mdf";
 
-            #region SurfacePro3 Version
-            var db = new DataContext(@"d:\SQL_DataBaseFiles\myDbase.mdf");
-            //var db = new DataContext(@"c:\Program Files\MicrosoftSQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\myNewDbase.mdf");
-            #endregion
+            var db = new DataContext(connectionString);
 
             var query = from c in db.GetTable<EmployeesTable>()
                 where c.Name == "Mike"
