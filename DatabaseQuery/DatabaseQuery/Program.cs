@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
-using System.Linq;
 
 namespace DatabaseQuery
 {
@@ -20,10 +20,11 @@ namespace DatabaseQuery
             var db = new DataContext(ConnectString());
 
             var query = from c in db.GetTable<EmployeesTable>()
+                orderby c.Name
                 select c;
 
             foreach(var item in query)
-                Console.WriteLine($"Name: {item.Name}, Title: {item.Title}");
+                Console.WriteLine($"Name: {item.Name},\tTitle: {item.Title}");
         }
 
         private static string ConnectString()
