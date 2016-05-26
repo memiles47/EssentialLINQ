@@ -24,14 +24,14 @@ namespace DatabaseQuery
                 select c;
 
             foreach(var item in query)
-                Console.WriteLine($"ID: {item.Id}\nName: {item.Name}\nTitle: {item.Title}");
+                Console.WriteLine($"{item.Name}");
         }
 
         private static string ConnectString()
         {
-            return Environment.MachineName == "MEM_SURFACE"
-                ? @"server = MEM_SURFACE\SQLEXPRESS; integrated security = true; database = myDbase;"
-                : @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDbase;";
+            return Environment.MachineName == "MEM-SURFACEBOOK"
+                ? @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDbase;"
+                : @"server = MEM_SURFACE\SQLEXPRESS; integrated security = true; database = myDbase;";
         }
     }
 }
