@@ -19,7 +19,6 @@ namespace DatabaseQuery
         {
             var db = new DataContext(ConnectString());
 
-            //With well written code there should never be a reason to add comments.
             var query = from c in db.GetTable<EmployeesTable>()
                 orderby c.Name
                 select c;
