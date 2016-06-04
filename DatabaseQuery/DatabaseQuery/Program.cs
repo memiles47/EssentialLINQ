@@ -26,6 +26,8 @@ namespace DatabaseQuery
             foreach(var item in query)
                 Console.WriteLine($"Name: {item.Name},\tTitle: {item.Title}");
         }
+
+        //Demos for my Book
         private static string ConnectString()
         {
             return Environment.MachineName == "MEM-SURFACEBOOK"
