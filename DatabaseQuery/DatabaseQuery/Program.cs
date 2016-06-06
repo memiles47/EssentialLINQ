@@ -31,8 +31,8 @@ namespace DatabaseQuery
         private static string ConnectString()
         {
             return Environment.MachineName == "MEM-SURFACEBOOK"
-                ? @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDbase;"
-                : @"server = MEM-SURFACEPRO3\SQLEXPRESS; integrated security = true; database = myDbase;";
+                ? @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDBase;"
+                : @"server = MEM-SURFACEPRO3\SQLEXPRESS; integrated security = true; database = myDBase;";
         }
     }
 }
