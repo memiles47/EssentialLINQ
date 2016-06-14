@@ -25,14 +25,15 @@ namespace DatabaseQuery
 
             foreach(var item in query)
                 Console.WriteLine($"Name: {item.Name},\tTitle: {item.Title}");
+
+            Console.ReadLine();
         }
 
         //Demos for my Book - Why did it not take when I pushed the changes.
         private static string ConnectString()
         {
             return Environment.MachineName == "MEM-SURFACEBOOK"
-                ? @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDBase;"
-                : @"server = MEM-SURFACEPRO3\SQLEXPRESS; integrated security = true; database = myDBase;";
+                ? @"server = MEM-SURFACEBOOK\SQLEXPRESS; integrated security = true; database = myDatabase;"
+                : @"server = MEM-SURFACEPRO3\SQLEXPRESS; integrated security = true; database = myDatabase;";
         }
     }
-}
