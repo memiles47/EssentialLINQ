@@ -23,7 +23,7 @@ namespace DatabaseQuery
                 orderby c.Name
                 select c;
 
-            foreach(var item in query)
+            foreach (var item in query)
                 Console.WriteLine($"Name: {item.Name},\tTitle: {item.Title}");
 
             Console.ReadLine();
@@ -37,3 +37,4 @@ namespace DatabaseQuery
                 : @"server = MEM-SURFACEPRO3\SQLEXPRESS; integrated security = true; database = myDatabase;";
         }
     }
+}
