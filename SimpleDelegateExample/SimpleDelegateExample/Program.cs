@@ -27,8 +27,8 @@ namespace SimpleDelegateExample
             Func<string, int, int, string> showMe = (a, b, c) => string.Format(a, b, c, (b + c));
             Console.WriteLine($"Result of calling the \'ShowMe\' Function: {showMe("{0} + {1} = {2}", 3, 5)}");
 
+            Console.WriteLine("\nDare ya to look closely at that delegate example!");
             Console.ReadLine();
-
         }
     }
 }
