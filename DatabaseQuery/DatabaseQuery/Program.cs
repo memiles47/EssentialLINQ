@@ -6,16 +6,16 @@ using System.Data.Linq.Mapping;
 namespace DatabaseQuery
 {
     [Table(Name = "Employees")]
-    class EmployeesTable
+    internal class EmployeesTable
     {
         [Column] public int Id;
         [Column] public string Name;
         [Column] public string Title;
     }
 
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             var db = new DataContext(ConnectString());
 
