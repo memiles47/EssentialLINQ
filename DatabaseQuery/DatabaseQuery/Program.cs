@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
-using System.Runtime.CompilerServices;
 
 namespace DatabaseQuery
 {
@@ -19,11 +18,6 @@ namespace DatabaseQuery
         private static void Main()
         {
             var db = new DataContext(ConnectString());
-
-            if (false)
-            {
-                Console.WriteLine("This line will never be accessed");
-            }
 
             var query = from c in db.GetTable<EmployeesTable>()
                 orderby c.Name
