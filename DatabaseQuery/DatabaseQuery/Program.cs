@@ -2,22 +2,28 @@
 using System.Linq;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
+using System.Runtime.CompilerServices;
 
 namespace DatabaseQuery
 {
     [Table(Name = "Employees")]
-    class EmployeesTable
+    internal class EmployeesTable
     {
         [Column] public int Id;
         [Column] public string Name;
         [Column] public string Title;
     }
 
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             var db = new DataContext(ConnectString());
+
+            if (false)
+            {
+                Console.WriteLine("This line will never be accessed");
+            }
 
             var query = from c in db.GetTable<EmployeesTable>()
                 orderby c.Name
