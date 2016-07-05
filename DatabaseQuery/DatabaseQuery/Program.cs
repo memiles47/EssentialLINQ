@@ -28,8 +28,6 @@ namespace DatabaseQuery
 
             Console.ReadLine();
         }
-
-        //Demos for my Book - Why did it not take when I pushed the changes.
         private static string ConnectString()
         {
             return Environment.MachineName == "MEM-SURFACEBOOK"
