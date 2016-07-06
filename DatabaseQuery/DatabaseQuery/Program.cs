@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
-using System.Runtime.CompilerServices;
 
 namespace DatabaseQuery
 {
