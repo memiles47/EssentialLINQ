@@ -20,11 +20,6 @@ namespace DatabaseQuery
         {
             var db = new DataContext(ConnectString());
 
-            if (false)
-            {
-                Console.WriteLine("This line will never be accessed");
-            }
-
             var query = from c in db.GetTable<EmployeesTable>()
                 orderby c.Name
                 select c;
@@ -34,8 +29,6 @@ namespace DatabaseQuery
 
             Console.ReadLine();
         }
-
-        //Demos for my Book - Why did it not take when I pushed the changes.
         private static string ConnectString()
         {
             return Environment.MachineName == "MEM-SURFACEBOOK"
