@@ -11,6 +11,11 @@ namespace SimpleDelegateExample
             return a + b;
         }
 
+        /*
+         * Now if you can figure out this mess of a delegate, when you are done I can
+         * guarantee you you brain will be sore
+         */
+
         public static void CallDelegate(Func<int, int, int> myDelegate)
         {
             Console.WriteLine($"{myDelegate(272, 153)}\n");
