@@ -18,6 +18,7 @@ namespace SimpleDelegateExample
 
         private static void Main()
         {
+            //Instantiate new class
             var michael = new NewClass("Michael Miles");
 
             Func<int, int, int> myDelegate = Add;
