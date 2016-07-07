@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
 namespace SimpleDelegateExample
 {
@@ -19,6 +18,8 @@ namespace SimpleDelegateExample
 
         private static void Main()
         {
+            var michael = new NewClass("Michael Miles");
+
             Func<int, int, int> myDelegate = Add;
 
             Console.WriteLine($"{myDelegate(271, 152)}");
@@ -27,6 +28,8 @@ namespace SimpleDelegateExample
 
             Func<string, int, int, string> showMe = (a, b, c) => string.Format(a, b, c, (b + c));
             Console.WriteLine($"Result of calling the \'ShowMe\' Function: {showMe("{0} + {1} = {2}", 3, 5)}");
+
+            Console.WriteLine($"\nMy Name is: {michael.myName}");
 
             Console.ReadLine();
         }
