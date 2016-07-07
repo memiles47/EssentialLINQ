@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace SimpleDelegateExample
 {
@@ -10,11 +11,6 @@ namespace SimpleDelegateExample
         {
             return a + b;
         }
-
-        /*
-         * Now if you can figure out this mess of a delegate, when you are done I can
-         * guarantee you you brain will be sore
-         */
 
         public static void CallDelegate(Func<int, int, int> myDelegate)
         {
@@ -31,6 +27,8 @@ namespace SimpleDelegateExample
 
             Func<string, int, int, string> showMe = (a, b, c) => string.Format(a, b, c, (b + c));
             Console.WriteLine($"Result of calling the \'ShowMe\' Function: {showMe("{0} + {1} = {2}", 3, 5)}");
+
+            Console.ReadLine();
         }
     }
 }
