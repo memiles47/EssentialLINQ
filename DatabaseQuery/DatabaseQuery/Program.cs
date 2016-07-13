@@ -29,6 +29,7 @@ namespace DatabaseQuery
             Console.ReadLine();
         }
         //Method for creating the connect string depending on what computer I am using
+        //Create database in surface book and check the logic
         private static string ConnectString()
         {
             return Environment.MachineName == "MEM-SURFACEBOOK"
