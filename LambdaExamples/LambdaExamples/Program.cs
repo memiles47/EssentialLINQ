@@ -4,6 +4,7 @@ namespace LambdaExamples
 {
     internal class Program
     {
+        //No Comments necessary
         private static void Main()
         {
             #region Subtract Method
