@@ -2,7 +2,11 @@
 {
     public static class SpecialString
     {
-        public static bool IsState(string source)
+        //Regular Method
+        //public static bool IsState(string source)
+        
+        //Extention Method
+        public static bool IsState(this string source)
         {
             string[] stateCodes =
             {

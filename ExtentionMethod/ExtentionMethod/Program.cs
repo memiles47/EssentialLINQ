@@ -19,7 +19,11 @@ namespace ExtentionMethod
 
         public static void ShowTest(string state)
         {
-            Console.WriteLine($"You entered: {state}, It is a state: {SpecialString.IsState(state)}");
+            //Calling the regular method
+            //Console.WriteLine($"You entered: {state}, It is a state: {SpecialString.IsState(state)}");
+
+            //Calling the extention string method shorter and easier to read
+            Console.WriteLine($"You entered: {state}, It is a state: {state.IsState()}");
         }
     }
 }
