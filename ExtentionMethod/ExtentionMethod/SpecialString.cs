@@ -1,4 +1,6 @@
-﻿namespace ExtentionMethod
+﻿using System.Linq;
+
+namespace ExtentionMethod
 {
     public static class SpecialString
     {
@@ -23,15 +25,16 @@
 
             source = source.ToUpper();
 
-            foreach (var item in stateCodes)
-            {
-                if (source == item)
-                {
-                    return true;
-                }
-            }
+            //Converted foreach loop into LINQ Exression
+            return stateCodes.Any(item => source == item);
 
-            return false;
+            //foreach (var item in stateCodes)
+            //{
+            //    if (source == item)
+            //    {
+            //        return true;
+            //    }
+            //}
         }
     }
 }
