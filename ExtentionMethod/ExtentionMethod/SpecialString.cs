@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace ExtentionMethod
+namespace Methods
 {
     public static class SpecialString
     {

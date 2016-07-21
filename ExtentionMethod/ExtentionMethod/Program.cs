@@ -1,5 +1,8 @@
 ﻿using System;
 
+//Added the Methods namespace for the extention methods
+using Methods;
+
 namespace ExtentionMethod
 {
     internal class Program
