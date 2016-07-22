@@ -16,6 +16,8 @@ namespace ExtentionMethod
             ShowTest("NV");
             ShowTest("NM");
             ShowTest("Mi");
+            ShowTest("ME");
+            ShowTest("hi");
 
             Console.ReadLine();
         }
